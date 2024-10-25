@@ -1,21 +1,7 @@
+import { SidebarItemType } from "@/types/sidebar-item.type"
 import { Bell, Home, LineChart, Users, Book, User, MessageCircle, LogOut, ShoppingCart, Settings, Wallet, MessageCircleQuestion, FileUser } from "lucide-react"
 
-import { ForwardRefExoticComponent, RefAttributes } from "react";
-import { LucideProps } from "lucide-react";
-
-interface NavListItemInterface {
-  id: string;
-  title: string;
-  href: string;
-  attribute: ForwardRefExoticComponent<Omit<LucideProps, "ref"> & RefAttributes<SVGSVGElement>>;
-  isAccessToVisible: string[];
-  option: 'Main' | 'Option';
-}
-
-
-
-const newLocal = '';
-const NavListItemData: NavListItemInterface[] =
+const SidebarItemInfo: SidebarItemType[] =
 [
   {
     id: 'badbcd93-4abb-5d44-a93b-18424488f927',
@@ -23,7 +9,7 @@ const NavListItemData: NavListItemInterface[] =
     href : '/',
     attribute: Home,
     isAccessToVisible: ['all'],
-    option: 'Main',
+    option: 'Application',
   },
   {
     id: '65bf5e06-4016-5e78-88dd-4bbc3b20a509',
@@ -31,7 +17,7 @@ const NavListItemData: NavListItemInterface[] =
     href : '/books',
     attribute: Book,
     isAccessToVisible: ['all'],
-    option: 'Main',
+    option: 'Application',
   },
   {
     id: 'ce1c6487-701a-5c4e-a95a-6087b9e55cca',
@@ -39,7 +25,7 @@ const NavListItemData: NavListItemInterface[] =
     href : '/users',
     attribute: User,
     isAccessToVisible: ['all'],
-    option: 'Main',
+    option: 'Application',
   },
   {
     id: '8f3b7790-6a0c-512d-8aae-34af9d0fcaa9',
@@ -47,7 +33,7 @@ const NavListItemData: NavListItemInterface[] =
     href : '/staffs',
     attribute: Users,
     isAccessToVisible: ['all'],
-    option: 'Main',
+    option: 'Application',
   },
   {
     id: '299fdf34-6a6b-56a0-932a-196de5660f2c',
@@ -55,7 +41,7 @@ const NavListItemData: NavListItemInterface[] =
     href : '/analytics',
     attribute: LineChart,
     isAccessToVisible: ['all'],
-    option: 'Main',
+    option: 'Application',
   },
   {
     id: '6c3716de-6fd9-54f1-a860-910c57034e30',
@@ -63,7 +49,7 @@ const NavListItemData: NavListItemInterface[] =
     href : '/message',
     attribute: MessageCircle,
     isAccessToVisible: ['all'],
-    option: 'Main',
+    option: 'Application',
   },
   {
     id: '4c519f69-96b6-562f-b739-5034169ad2c2',
@@ -71,7 +57,7 @@ const NavListItemData: NavListItemInterface[] =
     href : '/notifications',
     attribute: Bell,
     isAccessToVisible: ['all'],
-    option: 'Main',
+    option: 'Application',
   },
   {
     id: '25bac922-5ad1-5e0d-a001-abdddd49340e',
@@ -107,9 +93,9 @@ const NavListItemData: NavListItemInterface[] =
   }
 ]
 
-const navListOption = {
-  Main: NavListItemData.filter((item) => item.option === 'Main'),
-  Option: NavListItemData.filter((item) => item.option === 'Option')
+const SidebarItemComponent = {
+  Application: SidebarItemInfo.filter((item) => item.option === 'Application'),
+  Option: SidebarItemInfo.filter((item) => item.option === 'Option')
 }
 
-export { navListOption }
+export { SidebarItemComponent }

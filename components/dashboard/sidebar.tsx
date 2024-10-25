@@ -1,7 +1,7 @@
 import { Sidebar, SidebarContent, SidebarFooter, SidebarGroup, SidebarGroupContent, SidebarGroupLabel, SidebarHeader, SidebarMenu, SidebarMenuButton, SidebarMenuItem, } from "@/components/ui/sidebar"
-import { navListOption } from "@/constants/data";
 import Link from "next/link";
 import LinkLogo from "@/components/link/logo/link-logo-header";
+import { SidebarItemComponent } from "@/constants/sidebar.data";
 
 export function AppSidebar() {
   return (
@@ -15,7 +15,7 @@ export function AppSidebar() {
           <SidebarGroupContent>
             <SidebarMenu>
               {
-                navListOption.Main.map((item) => {
+                SidebarItemComponent.Application.map((item) => {
 
                   return (
                     <SidebarMenuItem key={item.id}>
@@ -40,7 +40,7 @@ export function AppSidebar() {
           <SidebarGroupContent>
             <SidebarMenu>
               {
-                navListOption.Option.map((item) => {
+                SidebarItemComponent.Option.map((item) => {
                   return (
                     <SidebarMenuItem key={item.id}>
                       <SidebarMenuButton asChild tooltip={item.title} >
