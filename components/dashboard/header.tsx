@@ -2,6 +2,7 @@ import { SidebarTrigger } from "@/components/ui/sidebar";
 import { Separator } from "@radix-ui/react-separator";
 import NavUser from "./nav-user";
 import { SearchInput } from "./search-input";
+import ThemeToggle from "../theme/toggle/theme-toggle";
 
 export function AppHeader() {
   return (
@@ -12,7 +13,7 @@ export function AppHeader() {
           <Separator orientation="vertical" className="mr-2 h-4" />
           {/* <Breadcrumb /> */}
         </div>
-        <div className=" hidden w-[40%] items-center gap-2 px-4 md:flex ">
+        <div className="w-1/3 items-center gap-2 px-4 md:flex ">
           <SearchInput />
         </div>
         <div className="flex items-center gap-2 px-4">
