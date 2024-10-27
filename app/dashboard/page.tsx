@@ -1,12 +1,13 @@
 import CardInfo from "@/components/card/card-info";
 import StaffList from "@/components/card/staffs-list";
+import TopChoicesBook from "@/components/card/top-choices-book";
 import Intro from "@/components/dashboard/intro";
 import ScrollbarContainer from "@/components/dashboard/scrollbar-container";
 import { Card } from "@/components/ui/card";
 
 export default function Page() {
   return (
-    <main>
+    <main className="bg-[#F9F9F9]">
       <ScrollbarContainer scrollable>
         <div className="space-y-4">
           {/* intro  */}
@@ -26,6 +27,8 @@ export default function Page() {
               <StaffList />
             </div>
           </div>
+
+          <TopChoicesBook />
         </div>
       </ScrollbarContainer>
     </main>
